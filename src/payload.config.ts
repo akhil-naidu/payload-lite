@@ -29,7 +29,10 @@ export default buildConfig({
   },
   db: sqliteAdapter({
     client: {
-      url: process.env.DATABASE_URI || '',
+      url: 'file:./payload-lite.db',
+      syncUrl: process.env.DATABASE_URI,
+      syncInterval: 60,
+      authToken: process.env.AUTHTOKEN,
     },
   }),
   sharp,
