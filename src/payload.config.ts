@@ -29,9 +29,9 @@ export default buildConfig({
   },
   db: sqliteAdapter({
     client: {
-      url: 'file:./payload-lite.db',
-      syncUrl: process.env.DATABASE_URI,
-      syncInterval: 60,
+      url: process.env.VERCEL ? process.env.DATABASE_URI! : 'file:./payload-lite.db',
+      syncUrl: process.env.VERCEL ? undefined : process.env.DATABASE_URI,
+      syncInterval: process.env.VERCEL ? undefined : 60,
       authToken: process.env.AUTHTOKEN,
     },
   }),
