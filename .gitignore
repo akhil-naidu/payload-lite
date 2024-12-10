@@ -42,5 +42,5 @@ next-env.d.ts
 
 /media
 
-payload-lite.db
-payload-lite.db-*
+# payload-lite.db
+# payload-lite.db-*
