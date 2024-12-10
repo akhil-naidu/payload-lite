@@ -1,8 +1,6 @@
 import configPromise from '@payload-config'
 
 const CustomDevPage = async (props: any) => {
-  console.log(await configPromise)
-
   return (
     <div>
       <h1>Custom Admin Page</h1>
