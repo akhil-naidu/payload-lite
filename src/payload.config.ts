@@ -37,7 +37,7 @@ export default buildConfig({
     //   authToken: process.env.AUTHTOKEN,
     // },
     client: {
-      url: 'file:payload-lite.db',
+      url: 'file:data/payload-lite.db',
     },
   }),
   sharp,
